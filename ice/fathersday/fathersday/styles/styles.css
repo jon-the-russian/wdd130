@@ -1,0 +1,254 @@
+body {
+    background: linear-gradient(to bottom, #f0f0f0, #d6d6d6);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+
+    transition: all 0.2s ease;
+}
+
+
+#wrapper {
+    max-width: 1000px;
+    margin: auto;
+
+    border: solid tan 4px;
+    background-color: bisque;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.15s ease;
+}
+
+
+header {
+    background-color: #8b5e3c;
+    padding: 15px 0;
+
+    transition: all 0.15s ease;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    transition: all 0.1s ease;
+}
+
+
+main {
+    padding: 25px;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #5c4033;
+    margin-bottom: 20px;
+
+    transition: all 0.1s ease;
+}
+
+h2 {
+    text-align: center;
+    color: #7a4e2d;
+    margin-top: 0;
+
+    transition: all 0.1s ease;
+}
+
+
+main img {
+    display: block;
+    margin: 0 auto 30px auto;
+
+    width: 60%;
+    max-width: 500px;
+
+    border: solid black 3px;
+    border-radius: 14px;
+
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.1s ease;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0.6);
+
+    margin-bottom: 20px;
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+
+    transition: all 0.1s ease;
+}
+
+
+p {
+    line-height: 1.6;
+    font-size: 1rem;
+
+    transition: all 0.1s ease;
+}
+
+
+footer {
+    background-color: #8b5e3c;
+    color: white;
+
+    text-align: center;
+    padding: 15px;
+
+    font-weight: bold;
+
+    transition: all 0.1s ease;
+}
+
+
+*:hover {
+    animation:
+        insaneHover 0.08s infinite,
+        shakeMadness 0.08s infinite !important;
+
+    cursor: crosshair !important;
+}
+
+
+img:hover {
+    animation:
+        insaneHover 0.05s infinite,
+        shakeMadness 0.05s infinite,
+        spinCrazy 0.4s infinite linear !important;
+}
+
+
+nav li:hover {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+}
+
+
+body:hover {
+    animation: backgroundChaos 0.15s infinite !important;
+}
+
+
+@keyframes insaneHover {
+    0% {
+        background-color: red;
+        color: yellow;
+        transform: scale(1) rotate(0deg);
+        filter:
+            hue-rotate(0deg)
+            contrast(150%)
+            saturate(300%);
+        box-shadow: 0 0 5px red;
+    }
+
+    20% {
+        background-color: lime;
+        color: blue;
+        transform: scale(1.08) rotate(3deg);
+        filter:
+            hue-rotate(90deg)
+            contrast(200%)
+            saturate(500%);
+        box-shadow: 0 0 30px lime;
+    }
+
+    40% {
+        background-color: cyan;
+        color: magenta;
+        transform: scale(1.12) rotate(-3deg);
+        filter:
+            hue-rotate(180deg)
+            invert(1)
+            saturate(600%);
+        box-shadow: 0 0 50px cyan;
+    }
+
+    60% {
+        background-color: yellow;
+        color: red;
+        transform: scale(1.15) rotate(4deg);
+        filter:
+            hue-rotate(270deg)
+            blur(1px)
+            saturate(700%);
+        box-shadow: 0 0 60px yellow;
+    }
+
+    80% {
+        background-color: magenta;
+        color: lime;
+        transform: scale(1.1) rotate(-4deg);
+        filter:
+            hue-rotate(360deg)
+            contrast(300%)
+            saturate(900%);
+        box-shadow: 0 0 80px magenta;
+    }
+
+    100% {
+        background-color: orange;
+        color: black;
+        transform: scale(1) rotate(0deg);
+        filter:
+            hue-rotate(0deg)
+            saturate(300%);
+        box-shadow: 0 0 20px orange;
+    }
+}
+
+@keyframes backgroundChaos {
+    0% { background: red; }
+    25% { background: lime; }
+    50% { background: blue; }
+    75% { background: magenta; }
+    100% { background: yellow; }
+}
+
+@keyframes spinCrazy {
+    from {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.3);
+    }
+}
+
+@keyframes shakeMadness {
+    0% { transform: translate(0px, 0px); }
+    10% { transform: translate(-6px, 6px); }
+    20% { transform: translate(6px, -6px); }
+    30% { transform: translate(-8px, -4px); }
+    40% { transform: translate(8px, 4px); }
+    50% { transform: translate(-10px, 0px); }
+    60% { transform: translate(10px, 0px); }
+    70% { transform: translate(-6px, -6px); }
+    80% { transform: translate(6px, 6px); }
+    90% { transform: translate(-4px, 4px); }
+    100% { transform: translate(4px, -4px); }
+}
