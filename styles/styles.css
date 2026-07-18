@@ -52,6 +52,20 @@
             margin-top: 50px;
         }
 
+        h3 {
+            font-family: 'Cormorant_Garamond', sans-serif;
+            font-size: 44px;
+            color: #FFF;
+            flex-wrap: wrap;
+            margin: 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            color: #B89A57;
+        }
+
         nav {
             position: absolute;
             margin: 0 auto;
